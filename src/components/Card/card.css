@@ -1,11 +1,28 @@
+#cards-list {
+    display: flex;
+    gap: 18px;
+    padding: 0 37px;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+  
 #card {
-    max-width: 175px;
+    min-width: 175px;
     margin-top: 50px;
+    flex: 0 0 auto;       
+    display: flex;        
+    flex-direction: column;
 }
 
 #card > img {
     width: 100%;
+    height: 235px;
     border-radius: 9px;
+    transition: 400ms ease-in-out;
+}
+
+#card > img:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 #card > div {
@@ -16,6 +33,11 @@
     line-height: 110%;
     color: #222222;
     margin-top: 8px;
+}
+
+#card > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .gray {

@@ -6,4 +6,6 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  min-width: 100%;
+  display: inline-block; 
 }

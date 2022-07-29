@@ -5,6 +5,7 @@ import './card.css'
 export default function Card(props) {
     return (
         <div id="card">
+            {props.openSpots === 0 && <div>SOLD OUT</div>}
             <img src={`assets/${props.img}`} />
             <div>
                 <img src={starIcon} />
