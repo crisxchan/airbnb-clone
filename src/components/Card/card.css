@@ -62,6 +62,7 @@
 }
 
 #badge {
+    z-index: 10;
     position: absolute;
     top: 6px;
     left: 6px;

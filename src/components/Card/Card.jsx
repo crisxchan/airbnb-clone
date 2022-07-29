@@ -1,11 +1,11 @@
-// import imgSubject from '../../assets/cards/1.png'
 import starIcon from '../../assets/star-icon.png'
 import './card.css'
 
 export default function Card(props) {
+    let badgeText = props.openSpots === 0 ? 'SOLD OUT' : props.country === 'Online' ? 'ONLINE' : null;
     return (
         <div id="card">
-            {props.openSpots === 0 && <div id='badge'>SOLD OUT</div>}
+            {badgeText && <div id='badge'>{badgeText}</div>}
             <img src={`assets/${props.img}`} />
             <div id='info'>
                 <img src={starIcon} />
