@@ -5,9 +5,9 @@ import './card.css'
 export default function Card(props) {
     return (
         <div id="card">
-            {props.openSpots === 0 && <div>SOLD OUT</div>}
+            {props.openSpots === 0 && <div id='badge'>SOLD OUT</div>}
             <img src={`assets/${props.img}`} />
-            <div>
+            <div id='info'>
                 <img src={starIcon} />
                 <span>{props.rating}</span>
                 <span className='gray'>({props.reviewCount})</span>
