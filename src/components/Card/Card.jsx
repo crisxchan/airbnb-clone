@@ -1,20 +1,20 @@
-import imgSubject from '../../assets/cards/1.png'
+// import imgSubject from '../../assets/cards/1.png'
 import starIcon from '../../assets/star-icon.png'
 import './card.css'
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div id="card">
-            <img src={imgSubject} />
+            <img src={`assets/${props.img}`} />
             <div>
                 <img src={starIcon} />
-                <span>5.0</span>
-                <span className='gray'>(6)</span>
+                <span>{props.rating}</span>
+                <span className='gray'>({props.reviewCount})</span>
                 <span className='gray'>•</span>
-                <span className='gray'>USA</span>
+                <span className='gray'>{props.country}</span>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <span><b>From $136</b> / person</span>
+            <p>{props.caption}</p>
+            <span><b>From ${props.price}</b> / person</span>
         </div>
     )
 }
